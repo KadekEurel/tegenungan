@@ -305,7 +305,8 @@ em {
   font-weight: 300;
 }
 
-HERO .hero {
+/* HERO */
+.hero {
   position: relative;
   min-height: 100vh;
   display: flex;
