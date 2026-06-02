@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tegenungan Waterfall</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a class="logo" href="#">Tegenungan</a>
+        <ul class="nb-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#view">View</a></li>
+          <li><a href="#facility">Facility</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#view">View</a></li>
+          <li><a href="#facility">Facility</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+      <div class="hero-section">
+        <p class="hero-eyebrow" data-aos="fade-down" data-aos-duration="800">
+          Sukawati · Bali · Indonesia
+        </p>
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <span>Tegenungan</span>
+          <em>Waterfall</em>
+        </h1>
+        <p
+          class="hero-desc"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="250"
+        >
+          Tersembunyi di antara hutan tropis yang rimbun, air terjun Tegenungan
+          mengalir dengan deras dan menawan — sebuah surga alam yang menunggu
+          untuk dijelajahi.
+        </p>
+        <div
+          class="hero-cta"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="400"
+        >
+          <a href="#view" class="button-main">Explore Views</a>
+          <a href="#booking" class="button-outline">Book Visit</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- about strip -->
+    <section class="about-strip">
+      <div class="strip-inner" data-aos="fade-up">
+        <div class="strip-text">
+          <h2>Keajaiban Alam di Jantung Ubud</h2>
+          <p>
+            Air Terjun Tegenungan adalah salah satu destinasi alam paling
+            menakjubkan di Bali. Terletak hanya 15 menit dari pusat Ubud, air
+            terjun ini menawarkan pemandangan yang memukau dengan ketinggian
+            sekitar 20 meter, dikelilingi vegetasi tropis yang hijau dan segar.
+          </p>
+          <ul class="strip-badges">
+            <li>Eco-Tourism</li>
+            <li>Instagram Worthy</li>
+            <li>Swimming Spot</li>
+            <li>Sunrise Views</li>
+          </ul>
+        </div>
+        <div class="strip-image-wrap">
+          <div class="strip-img-placeholder">
+            <div class="waterfall-icon">
+              <svg
+                viewBox="0 0 200 280"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M60 0 Q65 40 55 80 Q50 120 60 160 Q65 200 55 240 Q50 260 60 280"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  opacity="0.6"
+                />
+                <path
+                  d="M90 0 Q95 50 80 100 Q70 150 85 200 Q90 240 80 280"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  fill="none"
+                  opacity="0.9"
+                />
+                <path
+                  d="M120 0 Q115 45 125 90 Q132 135 118 180 Q110 220 122 280"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  opacity="0.7"
+                />
+                <path
+                  d="M145 20 Q148 60 140 110 Q135 155 142 200 Q146 240 140 280"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  fill="none"
+                  opacity="0.5"
+                />
+                <ellipse
+                  cx="100"
+                  cy="265"
+                  rx="55"
+                  ry="12"
+                  fill="currentColor"
+                  opacity="0.15"
+                />
+                <path
+                  d="M20 200 Q60 180 100 190 Q140 180 180 200"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  opacity="0.4"
+                />
+                <path
+                  d="M0 240 Q40 220 100 230 Q160 220 200 240"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                  opacity="0.3"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- view section -->
+    <section class="section-view" id="view">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Gallery</p>
+        <h2>Pemandangan <em>Memukau</em></h2>
+        <p class="section-sub">
+          Setiap sudut menyimpan keindahan yang tak terlupakan
+        </p>
+      </div>
+
+      <div class="swiper view-swiper" data-aos="fade-up" data-aos-delay="150">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide view-slide">
+            <div
+              class="slide-img"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #1a3a2a 0%,
+                  #2d6a4f 40%,
+                  #40916c 70%,
+                  #74c69d 100%
+                );
+              "
+            >
+              <div class="slide-placeholder">
+                <img src="/img/foto3.jpg" alt="Main Falls" />
+                <p>Main Falls</p>
+              </div>
+            </div>
+            <div class="slide-caption">
+              <h3>Air Terjun Utama</h3>
+              <p>Derasnya aliran air dari ketinggian 20 meter</p>
+            </div>
+          </div>
+          <div class="swiper-slide view-slide">
+            <div
+              class="slide-img"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #0d2b1f 0%,
+                  #1b4332 40%,
+                  #2d6a4f 70%,
+                  #52b788 100%
+                );
+              "
+            >
+              <div class="slide-placeholder">
+                <img src="/img/airterjunmini.jpg" alt="airterjunmini" />
+                <p>Air Terjun Mini</p>
+              </div>
+            </div>
+            <div class="slide-caption">
+              <h3>Air Terjun Mini</h3>
+              <p>
+                Air terjun yang mengalir dengan lembut di ketinggian 10 meter
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide view-slide">
+            <div
+              class="slide-img"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #1b3a4b 0%,
+                  #1e6091 40%,
+                  #1a759f 70%,
+                  #48cae4 100%
+                );
+              "
+            >
+              <div class="slide-placeholder">
+                <img src="/img/byurrr.jpeg" alt="Pool View" />
+                <p>Pool View</p>
+              </div>
+            </div>
+            <div class="slide-caption">
+              <h3>Kolam Alami</h3>
+              <p>Airnya jernih dan segar untuk berenang</p>
+            </div>
+          </div>
+          <div class="swiper-slide view-slide">
+            <div
+              class="slide-img"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #2d1b00 0%,
+                  #7f4f24 40%,
+                  #b5835a 70%,
+                  #e9c46a 100%
+                );
+              "
+            >
+              <div class="slide-placeholder">
+                <img src="/img/omaclub.jpg" alt="oma View" />
+                <p>Oma Club</p>
+              </div>
+            </div>
+            <div class="slide-caption">
+              <h3>Oma Club</h3>
+              <p>
+                Club yang menyediakan berbagai fasilitas untuk menikmati suasana
+                alam
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide view-slide">
+            <div
+              class="slide-img"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #0f2027 0%,
+                  #203a43 40%,
+                  #2c5364 70%,
+                  #3a7ca5 100%
+                );
+              "
+            >
+              <div class="slide-placeholder">
+                <img src="/img/pasar.jpg" alt="pasar" />
+                <p>Evening</p>
+              </div>
+            </div>
+            <div class="slide-caption">
+              <h3>Pasar Anu</h3>
+              <p>
+                Tempat untuk berbelanja aksesoris dan makanan lokal yang nikmat
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination view-pagination"></div>
+        <div class="swiper-button-prev view-prev"></div>
+        <div class="swiper-button-next view-next"></div>
+      </div>
+    </section>
+
+    <!-- facility section -->
+    <section class="section-facility" id="facility">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Facilities</p>
+        <h2>Fasilitas <em>Lengkap</em></h2>
+        <p class="section-sub">Kenyamanan Anda adalah prioritas kami</p>
+      </div>
+
+      <div
+        class="swiper facility-swiper"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide facility-slide">
+            <div class="facility-icon">🅿️</div>
+            <div
+              class="facility-img"
+              style="background: linear-gradient(145deg, #1a2e1a, #2d5a27)"
+            >
+              <div class="slide-placeholder small"><span>Parkir</span></div>
+            </div>
+            <h3>Parkir Luas</h3>
+            <p>
+              Area parkir yang luas dan aman untuk kendaraan roda dua dan empat
+            </p>
+          </div>
+          <div class="swiper-slide facility-slide">
+            <div class="facility-icon">🍽️</div>
+            <div
+              class="facility-img"
+              style="background: linear-gradient(145deg, #2e1a0a, #7f4f24)"
+            >
+              <div class="slide-placeholder small">
+                <span>Warung Makan</span>
+              </div>
+            </div>
+            <h3>Warung Makan</h3>
+            <p>
+              Nikmati kuliner lokal Bali yang autentik dengan pemandangan alam
+            </p>
+          </div>
+          <div class="swiper-slide facility-slide">
+            <div class="facility-icon">🚻</div>
+            <div
+              class="facility-img"
+              style="background: linear-gradient(145deg, #0a1e2e, #1e4060)"
+            >
+              <div class="slide-placeholder small"><span>Toilet</span></div>
+            </div>
+            <h3>Toilet Bersih</h3>
+            <p>
+              Fasilitas sanitasi yang bersih dan terawat di beberapa titik
+              lokasi
+            </p>
+          </div>
+          <div class="swiper-slide facility-slide">
+            <div class="facility-icon">👗</div>
+            <div
+              class="facility-img"
+              style="background: linear-gradient(145deg, #1a0a2e, #4a2070)"
+            >
+              <div class="slide-placeholder small">
+                <span>Ruang Ganti</span>
+              </div>
+            </div>
+            <h3>Ruang Ganti</h3>
+            <p>Kamar mandi dan ruang ganti pakaian yang nyaman</p>
+          </div>
+          <div class="swiper-slide facility-slide">
+            <div class="facility-icon">📸</div>
+            <div
+              class="facility-img"
+              style="background: linear-gradient(145deg, #1a2a1a, #2d6a2d)"
+            >
+              <div class="slide-placeholder small">
+                <img src="/img/fotospot.jpg" alt="Main Falls" />
+              </div>
+            </div>
+            <h3>Foto Spot</h3>
+            <p>Spot foto instagramable dengan latar air terjun yang epik</p>
+          </div>
+        </div>
+        <div class="swiper-pagination facility-pagination"></div>
+        <div class="swiper-button-prev facility-prev"></div>
+        <div class="swiper-button-next facility-next"></div>
+      </div>
+    </section>
+
+    <!-- booking section -->
+    <section class="booking-section" id="booking">
+      <div class="booking-inner">
+        <div class="booking-info" data-aos="fade-right">
+          <p class="section-eyebrow">Ticket & Hours</p>
+          <h2>Rencanakan <em>Kunjungan</em> Anda</h2>
+          <div class="info-cards">
+            <div class="info-card">
+              <div>
+                <h4>Jam Operasional</h4>
+                <p>Setiap hari: 08.00 – 18.00 WITA</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div>
+                <h4>Harga Tiket</h4>
+                <p>Wisatawan Domestik: Rp 15.000</p>
+                <p>Wisatawan Mancanegara: Rp 50.000</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div>
+                <h4>Lokasi</h4>
+                <p>Jl. Raya Tegenungan, Kemenuh, Sukawati, Gianyar, Bali</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div>
+                <h4>Tips Terbaik</h4>
+                <p>
+                  Kunjungi pagi hari untuk menghindari keramaian dan mendapatkan
+                  foto terbaik
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="booking-form-wrap" data-aos="fade-left">
+          <h3>Reservasi Online</h3>
+          <div class="booking-form">
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" placeholder="Masukkan nama Anda" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="email@contoh.com" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Tanggal Kunjungan</label>
+                <input type="date" />
+              </div>
+              <div class="form-group">
+                <label>Jumlah Orang</label>
+                <select>
+                  <option>1 orang</option>
+                  <option>2 orang</option>
+                  <option>3–5 orang</option>
+                  <option>6–10 orang</option>
+                  <option>10+ orang</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Jenis Pengunjung</label>
+              <div class="radio-group">
+                <label class="radio-label"
+                  ><input type="radio" name="type" checked /> Domestik</label
+                >
+                <label class="radio-label"
+                  ><input type="radio" name="type" /> Mancanegara</label
+                >
+              </div>
+            </div>
+            <button class="button-main full" onclick="handleBooking()">
+              Pesan Tiket Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section -->
+    <section class="review-post" id="reviews">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Testimonials</p>
+        <h2>Kata Mereka <em>Tentang Kami</em></h2>
+        <p class="section-sub">
+          Lebih dari 50.000 pengunjung puas setiap tahunnya
+        </p>
+      </div>
+
+      <div class="swiper review-swiper" data-aos="fade-up" data-aos-delay="150">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide review-slide">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "Pengalaman luar biasa! Air terjunnya sangat memukau dan airnya
+                jernih sekali. Pasti akan kembali lagi dengan keluarga.
+                Tempatnya sangat terawat dan bersih."
+              </p>
+              <div class="reviewer-info">
+                <div
+                  class="reviewer-avatar"
+                  style="background: linear-gradient(135deg, #40916c, #1b4332)"
+                >
+                  AP
+                </div>
+                <div>
+                  <p class="reviewer-name">Ayu Permata</p>
+                  <p class="reviewer-loc">Jakarta, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide review-slide">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "Absolutely stunning waterfall! The hike down is worth every
+                step. The natural pool at the bottom is refreshing and the
+                surrounding jungle is beautiful."
+              </p>
+              <div class="reviewer-info">
+                <div
+                  class="reviewer-avatar"
+                  style="background: linear-gradient(135deg, #1a759f, #0d2b3e)"
+                >
+                  JM
+                </div>
+                <div>
+                  <p class="reviewer-name">James Morrison</p>
+                  <p class="reviewer-loc">Melbourne, Australia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide review-slide">
+            <div class="review-card">
+              <div class="review-stars">★★★★☆</div>
+              <p class="review-text">
+                "Sehr beeindruckend! Der Wasserfall ist wunderschön und die
+                Umgebung atemberaubend. Die Einrichtungen sind gut gepflegt.
+                Empfehlenswert!"
+              </p>
+              <div class="reviewer-info">
+                <div
+                  class="reviewer-avatar"
+                  style="background: linear-gradient(135deg, #e9c46a, #7f4f24)"
+                >
+                  KS
+                </div>
+                <div>
+                  <p class="reviewer-name">Klaus Schmidt</p>
+                  <p class="reviewer-loc">Munich, Germany</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide review-slide">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "Tempat yang sangat indah! Kami datang saat sunrise dan
+                suasananya magis sekali. Fotografinya luar biasa, sangat
+                direkomendasikan bagi pecinta alam."
+              </p>
+              <div class="reviewer-info">
+                <div
+                  class="reviewer-avatar"
+                  style="background: linear-gradient(135deg, #9d4edd, #3c096c)"
+                >
+                  RW
+                </div>
+                <div>
+                  <p class="reviewer-name">Rizki Wibowo</p>
+                  <p class="reviewer-loc">Surabaya, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide review-slide">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "Une cascade magnifique entourée d'une jungle tropicale
+                luxuriante. Les photos ne rendent pas justice à la beauté réelle
+                de cet endroit!"
+              </p>
+              <div class="reviewer-info">
+                <div
+                  class="reviewer-avatar"
+                  style="background: linear-gradient(135deg, #e63946, #780000)"
+                >
+                  SL
+                </div>
+                <div>
+                  <p class="reviewer-name">Sophie Laurent</p>
+                  <p class="reviewer-loc">Paris, France</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination review-pagination"></div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <div class="contact-info" data-aos="fade-right">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2>Hubungi <em>Kami</em></h2>
+          <p>
+            Ada pertanyaan atau ingin informasi lebih lanjut? Kami siap membantu
+            Anda merencanakan kunjungan yang sempurna.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Telepon</strong>
+                <p>+62 361 123 4567</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>info@tegenunganwaterfall.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Alamat</strong>
+                <p>
+                  Jl. Raya Tegenungan, Kemenuh, Sukawati, Gianyar, Bali 80582
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>
+              <div>
+                <strong>Media Sosial</strong>
+                <p>@tegenunganwaterfall</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Nama</label>
+              <input type="text" placeholder="Nama Anda" id="contactName" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                placeholder="email@contoh.com"
+                id="contactEmail"
+              />
+            </div>
+            <div class="form-group">
+              <label>Subjek</label>
+              <input
+                type="text"
+                placeholder="Subjek pesan"
+                id="contactSubject"
+              />
+            </div>
+            <div class="form-group">
+              <label>Pesan</label>
+              <textarea
+                rows="5"
+                placeholder="Tulis pesan Anda di sini..."
+                id="contactMessage"
+              ></textarea>
+            </div>
+            <button class="button-main full" onclick="handleContact()">
+              Kirim Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="logo" href="#">Tegenungan</a>
+          <p>
+            Air terjun yang memukau di jantung Bali. Alam tropis yang autentik
+            dan tak terlupakan.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="Facebook">fb</a>
+            <a href="#" aria-label="TikTok">tk</a>
+            <a href="#" aria-label="YouTube">yt</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#view">Pemandangan</a></li>
+            <li><a href="#facility">Fasilitas</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h4>Informasi</h4>
+          <ul>
+            <li>Buka: 08.00 – 18.00 WITA</li>
+            <li>Tiket: Rp 15.000 / 50.000</li>
+            <li>Parkir tersedia</li>
+            <li>Foto & Drone diizinkan</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontak</h4>
+          <ul>
+            <li>📞 +62 361 123 4567</li>
+            <li>✉️ info@tegenunganwaterfall.com</li>
+            <li>📍 Kemenuh, Sukawati, Gianyar, Bali</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2024 Tegenungan Waterfall. All rights reserved. Made with 💚 in
+          Bali.
+        </p>
+      </div>
+    </footer>
+
+    <!-- toast notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
