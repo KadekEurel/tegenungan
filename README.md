@@ -35,17 +35,22 @@ img/
 ## Cara menggunakan gambar:
 
 Setelah menambahkan gambar, ganti background gradient di slide dengan:
+
 ```html
-<div class="slide-img" style="background-image: url('../img/views/view-1.jpg'); background-size: cover; background-position: center;">
+<div
+  class="slide-img"
+  style="background-image: url('../img/views/view-1.jpg'); background-size: cover; background-position: center;"
+></div>
 ```
 
 Atau untuk `<img>` tag langsung:
+
 ```html
 <img src="img/views/view-1.jpg" alt="Air Terjun Tegenungan" />
 ```
 
 ## Tips:
+
 - Format: JPG atau WebP untuk foto
 - Resolusi hero: minimal 1920×1080
 - Resolusi card: minimal 800×600
-- Kompres gambar agar website cepat loading
