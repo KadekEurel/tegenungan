@@ -45,10 +45,12 @@ img {
   max-width: 100%;
   display: block;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ul {
   list-style: none;
 }
@@ -61,6 +63,7 @@ h4 {
   font-family: "Cormorant Garamond", serif;
   line-height: 1.15;
 }
+
 em {
   font-style: italic;
   color: var(--gold);
@@ -70,9 +73,11 @@ em {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--deep);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--jade);
   border-radius: 3px;
@@ -148,6 +153,7 @@ em {
 .nb-list a:hover {
   color: var(--cream);
 }
+
 .nb-list a:hover::after {
   width: 100%;
 }
@@ -171,9 +177,11 @@ em {
 .hamburger.active span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
   transform: translateY(-6.5px) rotate(-45deg);
 }
@@ -195,6 +203,7 @@ em {
   flex-direction: column;
   gap: 0.5rem;
 }
+
 .mobile-menu a {
   display: block;
   padding: 0.75rem 0;
@@ -205,6 +214,7 @@ em {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: color var(--transition);
 }
+
 .mobile-menu a:hover {
   color: var(--gold);
 }
@@ -242,12 +252,15 @@ em {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(201, 168, 76, 0.35);
 }
+
 .button-main:hover::before {
   transform: translateX(0);
 }
+
 .button-main:active {
   transform: translateY(0);
 }
+
 .button-main.full {
   width: 100%;
   text-align: center;
@@ -343,12 +356,15 @@ em {
     transform: translateY(0) scale(1);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 0.4;
   }
+
   100% {
     transform: translateY(-80px) scale(0.5);
     opacity: 0;
@@ -487,12 +503,74 @@ em {
   0% {
     left: -100%;
   }
+
   50% {
     left: 0%;
   }
+
   100% {
     left: 100%;
   }
+}
+
+/* ---- HERO BACKGROUND & TEXT ANIMATIONS ---- */
+
+/* 1. Menggelapkan overlay background hero */
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  /* Tingkat kegelapan diturunkan agar foto background lebih menonjol */
+  background:
+    linear-gradient(to bottom, rgba(7, 20, 16, 0.55) 0%, rgba(7, 20, 16, 0.3) 50%, rgba(7, 20, 16, 0.75) 100%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2352b788' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+/* 2. Animasi Bergerak untuk Teks Judul Utama */
+.hero-section h1 span {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroTextUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.2s;
+  /* Muncul duluan */
+}
+
+.hero-section h1 em {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.75em;
+  color: var(--gold-lt);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroTextUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.5s;
+  /* Efek sinematik, muncul sedikit terlambat */
+}
+
+/* Keyframes Pergerakan Teks */
+@keyframes heroTextUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tambahan: Efek soft glow lembut saat di-hover agar judul terasa hidup */
+.hero-section h1:hover span {
+  text-shadow: 0 0 20px rgba(245, 240, 232, 0.3);
+  transition: text-shadow 0.4s ease;
+}
+
+.hero-section h1:hover em {
+  text-shadow: 0 0 20px rgba(233, 196, 106, 0.4);
+  transition: text-shadow 0.4s ease;
 }
 
 /* ABOUT STRIP */
@@ -574,14 +652,90 @@ em {
 }
 
 @keyframes flowDown {
+
   0%,
   100% {
     transform: translateY(0);
     opacity: 1;
   }
+
   50% {
     transform: translateY(8px);
     opacity: 0.8;
+  }
+}
+
+/* ---- ABOUT STRIP IMAGE & HOVER ANIMATION ---- */
+
+/* Memastikan container gambar bertindak sebagai bingkai rapi */
+.strip-img-placeholder {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* Memotong gambar yang keluar bingkai saat zoom */
+  box-shadow: 0 20px 60px rgba(27, 67, 50, 0.2);
+  background: var(--deep);
+  /* Warna dasar saat gambar loading */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animasi bingkai saat di-hover */
+.strip-img-placeholder:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(45, 106, 79, 0.35);
+}
+
+/* Pengaturan gambar utama di dalam bingkai */
+.strip-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.95) brightness(0.95);
+  /* Tone awal sedikit calm */
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efek zoom-in dan warna foto lebih hidup saat di-hover */
+.strip-img-placeholder:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.15) brightness(1.05);
+}
+
+/* Membuat efek kilatan cahaya (Shine/Glare Effect) */
+.strip-img-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  /* Posisi awal di luar kiri gambar */
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  /* Membuat kilatan miring seimbang */
+  pointer-events: none;
+}
+
+/* Menjalankan animasi kilatan cahaya saat bingkai di-hover */
+.strip-img-placeholder:hover::after {
+  animation: shineFlash 0.85s ease-out forwards;
+}
+
+@keyframes shineFlash {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+    /* Bergerak memotong ke kanan gambar */
   }
 }
 
@@ -609,7 +763,8 @@ em {
 
 .slide-img {
   width: 100%;
-  height: 520px;
+  height: 400px;
+  /* Menurunkan sedikit tinggi agar rasio horizontal lebih dapet */
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -617,6 +772,16 @@ em {
   position: relative;
   overflow: hidden;
   transition: transform var(--transition);
+}
+
+/* JIKA KAMU MENGGUNAKAN ELEMEN <img> DI DALAM .slide-img */
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ini kunci agar foto auto-fill tanpa merusak rasio (tidak gepeng) */
+  position: absolute;
+  inset: 0;
 }
 
 .slide-img::after {
@@ -641,6 +806,7 @@ em {
 .slide-placeholder span {
   font-size: 3.5rem;
 }
+
 .slide-placeholder p {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
@@ -719,6 +885,56 @@ em {
 
 .facility-icon {
   display: none;
+}
+
+/* ---- FACILITY IMAGE AUTO-FILL ---- */
+
+/* Menghapus background gradient bawaan pada slide fasilitas */
+.facility-slide .facility-img {
+  background: var(--forest) !important;
+  /* Warna dasar gelap jika foto loading */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Memaksa foto fasilitas memenuhi kotak secara proporsional */
+.facility-slide .facility-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Kunci utama auto-fill */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Memberikan efek gelap transparan di atas foto agar teks di dalam kotak tetap terbaca */
+.facility-slide .facility-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 20, 16, 0.8) 0%, rgba(7, 20, 16, 0.3) 100%);
+  z-index: 2;
+}
+
+/* Menaikkan posisi teks agar berada di atas foto */
+.facility-slide .facility-img .slide-placeholder {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facility-slide .facility-img .slide-placeholder span {
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  font-weight: 400;
 }
 
 /* BOOKING SECTION */
@@ -1000,7 +1216,7 @@ em {
   font-weight: 300;
 }
 
-.contact-info > p {
+.contact-info>p {
   font-size: 0.95rem;
   color: rgba(245, 240, 232, 0.6);
   font-weight: 300;
@@ -1222,6 +1438,7 @@ footer ul a:hover {
 /* RESPONSIVE */
 
 @media (max-width: 1024px) {
+
   .strip-inner,
   .booking-inner,
   .contact-inner {
@@ -1232,6 +1449,7 @@ footer ul a:hover {
   .strip-image-wrap {
     justify-content: flex-start;
   }
+
   .footer-inner {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
@@ -1242,6 +1460,7 @@ footer ul a:hover {
   .nb-list {
     display: none;
   }
+
   .hamburger {
     display: flex;
   }
@@ -1250,6 +1469,7 @@ footer ul a:hover {
     flex-wrap: wrap;
     gap: 1.5rem;
   }
+
   .stat {
     padding: 0 1.5rem;
   }
@@ -1270,6 +1490,7 @@ footer ul a:hover {
   .view-slide {
     width: 300px !important;
   }
+
   .slide-img {
     height: 380px;
   }
@@ -1288,10 +1509,12 @@ footer ul a:hover {
     flex-direction: column;
     align-items: center;
   }
+
   .strip-img-placeholder {
     width: 260px;
     height: 340px;
   }
+
   .booking-form-wrap,
   .contact-form-wrap {
     padding: 1.75rem;
@@ -1302,6 +1525,7 @@ footer ul a:hover {
 [data-aos] {
   pointer-events: none;
 }
+
 [data-aos].aos-animate {
   pointer-events: auto;
 }
